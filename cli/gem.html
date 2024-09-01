@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="gem.css">
+</head>
+<body>
+    <div class="full-img" id="fullImgBox">
+        <img src="" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+    <div class="container">
+        <h1 style="color: rgb(228, 129, 129);">Photo Gallery</h1>
+
+        <div class="upload-section">
+            <input type="file" id="imageUpload" accept="image/*">
+            <input type="text" id="imageTag" placeholder="Enter tags">
+            <input type="text" id="albumName" placeholder="Enter album name">
+            <button onclick="uploadImage()">Upload</button>
+            <span id="uploadError"></span>
+        </div>
+
+        <div class="albums">
+            <h2>Albums</h2>
+            <div id="albumList"></div>
+        </div>
+
+        <div class="gallery">
+            <h2>Gallery</h2>
+            <div id="gallery">
+                <img src="/WhatsApp Image 2024-08-20 at 20.25.07_ea282667.jpg" onclick="openFullImg(this.src)">
+                <img src="/WhatsApp Image 2024-07-14 at 15.30.59_cbc6f60d.jpg" onclick="openFullImg(this.src)">
+                <img src="/WhatsApp Image 2024-07-02 at 20.04.19_00b97d2d.jpg" onclick="openFullImg(this.src)">
+                <img src="/WhatsApp Image 2024-07-02 at 20.04.20_4345cd0f.jpg" onclick="openFullImg(this.src)">
+                <img src="/WhatsApp Image 2024-07-02 at 20.04.20_57d85c5a.jpg" onclick="openFullImg(this.src)">
+                <img src="/WhatsApp Image 2024-07-06 at 19.04.37_3660c15c.jpg" onclick="openFullImg(this.src)">
+                <img src="/WhatsApp Image 2024-07-06 at 18.46.53_c234e590.jpg" onclick="openFullImg(this.src)">
+                <img src="/WhatsApp Image 2024-07-06 at 19.04.38_402dfb64.jpg" onclick="openFullImg(this.src)">
+                <img src="/WhatsApp Image 2024-07-06 at 19.04.37_c67d695e.jpg" onclick="openFullImg(this.src)">
+                
+                </div>
+        </div>
+
+        <form>
+            <h2>Comment</h2>
+            <input type="text" id="commentInput" placeholder="Enter a comment">
+            <button type="button" onclick="simulateEnterPress()">Submit Comment</button>
+            <span id="commentError"></span>
+        </form>
+    </div>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <!-- form fields -->
+    </form>
+    
+
+    <script src="gem.js"></script>
+</body>
+</html>
